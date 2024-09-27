@@ -14,7 +14,7 @@ The VRF contract are part of edexa VRF setup which is used to create secure rand
 git clone "https://github.com/nishil-edx/VRF-contracts"
 ```
 
-2. use remix/hardhat to deploy consumer contract
+2. use remix/hardhat to deploy consumer contract . Dont forgot to use edexa testnet chain 
 
 3. use coordinator address in consumer constructor  which deployed for edexa testnet
 
