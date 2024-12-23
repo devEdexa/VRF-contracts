@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
-import "./IEdxVRFCoordinator.sol";
-import "./IVRFConsumer.sol";
+import "./interface/IEDXVRFCoordinator.sol";
+import "./interface/IVRFConsumer.sol";
 contract Consumer is IVRFConsumer{
-    IEdxVRFCoordinator public vrfCoordinator;
+    IEDXVRFCoordinator public vrfCoordinator;
 
     // Event to notify when random numbers are received
     event RandomNumbersReceived(uint256 requestId, uint256[] randomNumbers);
@@ -13,7 +13,7 @@ contract Consumer is IVRFConsumer{
     uint256[] internal  random;
 
     constructor(address coordinatorAddress) {
-        vrfCoordinator = IEdxVRFCoordinator(coordinatorAddress);
+        vrfCoordinator = IEDXVRFCoordinator(coordinatorAddress);
     }
 
     function requestRandomNumber(string memory seed, uint256 numWords) external override  {

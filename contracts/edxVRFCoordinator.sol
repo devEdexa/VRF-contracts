@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
-import "./IEdxVRFCoordinator.sol";
+import "./interface/IEDXVRFCoordinator.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
 
@@ -9,7 +9,7 @@ interface IConsumer {
     function receiveRandomNumbers(uint256 requestId, uint256[] memory randomNumbers) external;
 }
 
-contract edxVRFCoordinator is IEdxVRFCoordinator {
+contract edxVRFCoordinator is IEDXVRFCoordinator {
     using Counters for Counters.Counter;
     
     Counters.Counter private _requestIdCounter;
